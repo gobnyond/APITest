@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15.942028985507248" y="93.75"/>
+        </scene>
+        <!--AladinViewController-->
+        <scene sceneID="syg-KH-mpM">
+            <objects>
+                <viewController storyboardIdentifier="AladinViewController" title="AladinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0iU-vo-6nZ" customClass="AladinViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vqe-cl-JJF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BookTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PAk-Rm-SCs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g38-u9-EnY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g38-u9-EnY" firstAttribute="bottom" secondItem="PAk-Rm-SCs" secondAttribute="bottom" id="BaC-2r-46K"/>
+                            <constraint firstItem="PAk-Rm-SCs" firstAttribute="top" secondItem="g38-u9-EnY" secondAttribute="top" id="KSp-Pg-RwJ"/>
+                            <constraint firstItem="PAk-Rm-SCs" firstAttribute="leading" secondItem="g38-u9-EnY" secondAttribute="leading" id="Uic-iX-8gs"/>
+                            <constraint firstItem="g38-u9-EnY" firstAttribute="trailing" secondItem="PAk-Rm-SCs" secondAttribute="trailing" id="q5W-er-ynz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Aladin" id="jxo-4E-6ba"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FG-wp-ivq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="876.5625"/>
+        </scene>
+        <!--Detail Aladin View Controller-->
+        <scene sceneID="eAI-v6-JNG">
+            <objects>
+                <viewController storyboardIdentifier="DetailAladinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AGl-sZ-qng" customClass="DetailAladinViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VhK-EI-F3o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-T7-LNP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1500" id="EbF-nu-ALh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="8i9-ZC-3Sh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="IIN-eC-qQI"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IZ2-XU-ovp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1X-Jf-hq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="876.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Id0-1b-Fwb">
+            <objects>
+                <navigationController storyboardIdentifier="AladinNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NeT-0e-cwy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M37-rH-Im9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0iU-vo-6nZ" kind="relationship" relationship="rootViewController" id="KKZ-Iq-wJN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNu-4z-sZN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="876.5625"/>
         </scene>
     </scenes>
     <resources>

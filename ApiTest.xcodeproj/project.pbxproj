@@ -10,6 +10,11 @@
 		03519AA3848F0056D4FE6721 /* Pods_ApiTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDE3F56FC8D5998E3AD1D483 /* Pods_ApiTestTests.framework */; };
 		1B989635EB1FA494EF646DAB /* Pods_ApiTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8A26323BEC5E80698FB871 /* Pods_ApiTest.framework */; };
 		C340511A83DE0B5A0A3132F2 /* Pods_ApiTest_ApiTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8440602028018A8EFAF7DA9 /* Pods_ApiTest_ApiTestUITests.framework */; };
+		F117089927A3086E00F02BE1 /* Aladin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117089827A3086E00F02BE1 /* Aladin.swift */; };
+		F117089B27A30D1900F02BE1 /* AladinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117089A27A30D1900F02BE1 /* AladinViewController.swift */; };
+		F117089E27A3129D00F02BE1 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117089C27A3129D00F02BE1 /* BookTableViewCell.swift */; };
+		F117089F27A3129D00F02BE1 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F117089D27A3129D00F02BE1 /* BookTableViewCell.xib */; };
+		F11708A127A3141200F02BE1 /* DetailAladinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11708A027A3141200F02BE1 /* DetailAladinViewController.swift */; };
 		F1232C4D27A25EBD00CE5B68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1232C4C27A25EBD00CE5B68 /* AppDelegate.swift */; };
 		F1232C4F27A25EBD00CE5B68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1232C4E27A25EBD00CE5B68 /* SceneDelegate.swift */; };
 		F1232C5127A25EBD00CE5B68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1232C5027A25EBD00CE5B68 /* ViewController.swift */; };
@@ -51,6 +56,11 @@
 		C6BB9DEF05BBFA5C43C29533 /* Pods-ApiTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTest.release.xcconfig"; path = "Target Support Files/Pods-ApiTest/Pods-ApiTest.release.xcconfig"; sourceTree = "<group>"; };
 		DACFE838B791821D81A356C3 /* Pods-ApiTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiTest.debug.xcconfig"; path = "Target Support Files/Pods-ApiTest/Pods-ApiTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E8440602028018A8EFAF7DA9 /* Pods_ApiTest_ApiTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiTest_ApiTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F117089827A3086E00F02BE1 /* Aladin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aladin.swift; sourceTree = "<group>"; };
+		F117089A27A30D1900F02BE1 /* AladinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AladinViewController.swift; sourceTree = "<group>"; };
+		F117089C27A3129D00F02BE1 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		F117089D27A3129D00F02BE1 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
+		F11708A027A3141200F02BE1 /* DetailAladinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAladinViewController.swift; sourceTree = "<group>"; };
 		F1232C4927A25EBD00CE5B68 /* ApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1232C4C27A25EBD00CE5B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1232C4E27A25EBD00CE5B68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,9 +132,46 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F117089427A307F100F02BE1 /* APITest2 */ = {
+			isa = PBXGroup;
+			children = (
+				F117089727A3083400F02BE1 /* Model */,
+				F117089627A3082200F02BE1 /* View */,
+				F117089527A3081700F02BE1 /* Controller */,
+			);
+			path = APITest2;
+			sourceTree = "<group>";
+		};
+		F117089527A3081700F02BE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F117089A27A30D1900F02BE1 /* AladinViewController.swift */,
+				F117089C27A3129D00F02BE1 /* BookTableViewCell.swift */,
+				F117089D27A3129D00F02BE1 /* BookTableViewCell.xib */,
+				F11708A027A3141200F02BE1 /* DetailAladinViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F117089627A3082200F02BE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F117089727A3083400F02BE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F117089827A3086E00F02BE1 /* Aladin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F1232C4027A25EBD00CE5B68 = {
 			isa = PBXGroup;
 			children = (
+				F117089427A307F100F02BE1 /* APITest2 */,
 				F1232C4B27A25EBD00CE5B68 /* ApiTest */,
 				F1232C6527A25EBE00CE5B68 /* ApiTestTests */,
 				F1232C6F27A25EBE00CE5B68 /* ApiTestUITests */,
@@ -316,6 +363,7 @@
 				F1232C5927A25EBE00CE5B68 /* Assets.xcassets in Resources */,
 				F1232C8227A2610200CE5B68 /* MovieTableViewCell.xib in Resources */,
 				F1232C5427A25EBD00CE5B68 /* Main.storyboard in Resources */,
+				F117089F27A3129D00F02BE1 /* BookTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,9 +493,13 @@
 			files = (
 				F1232C8127A2610200CE5B68 /* MovieTableViewCell.swift in Sources */,
 				F1232C8A27A2696100CE5B68 /* MovieReponse.swift in Sources */,
+				F117089927A3086E00F02BE1 /* Aladin.swift in Sources */,
 				F1232C5127A25EBD00CE5B68 /* ViewController.swift in Sources */,
+				F117089E27A3129D00F02BE1 /* BookTableViewCell.swift in Sources */,
 				F1232C4D27A25EBD00CE5B68 /* AppDelegate.swift in Sources */,
+				F117089B27A30D1900F02BE1 /* AladinViewController.swift in Sources */,
 				F1232C5727A25EBD00CE5B68 /* ApiTest.xcdatamodeld in Sources */,
+				F11708A127A3141200F02BE1 /* DetailAladinViewController.swift in Sources */,
 				F1232C4F27A25EBD00CE5B68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +680,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J4JB9YXJLW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -656,6 +709,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J4JB9YXJLW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
