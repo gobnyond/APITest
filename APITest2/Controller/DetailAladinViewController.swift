@@ -8,7 +8,11 @@
 import UIKit
 
 class DetailAladinViewController: UIViewController {
-
+    @IBOutlet weak var detailcoverimage: UIImageView!
+    @IBOutlet weak var detailtitleLabel: UILabel!
+    @IBOutlet weak var detailpriceLabel: UILabel!
+    @IBOutlet weak var detaildescriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

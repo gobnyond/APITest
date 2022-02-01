@@ -10,21 +10,66 @@ import Alamofire
 
 class AladinViewController: UIViewController {
 
+    @IBOutlet weak var bookTableView: UITableView!
+    
+    var book: [Book] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.bookTableView.delegate = self
+        self.bookTableView.dataSource = self
+        self.bookTableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "BookTableViewCell")
+        self.bookTableView.estimatedRowHeight = 50
+        self.bookTableView.rowHeight = UITableView.automaticDimension
+        
+        self.getBook()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getBook() {
+        AF.request("https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=ttbstarku22490125001&QueryType=ItemNewAll&MaxResults=25&start=1&SearchTarget=Book&output=js&Version=20131101", method: .get, headers: nil)
+            .validate()
+            .responseDecodable(of: AladinOpen.self) {response
+                in
+                switch response.result {
+                case .success(let response):
+                    self.book = response.item
+                    self.bookTableView.reloadData()
+                    
+                    //print(self.book
+                    print("success")
+                    
+                case .failure(let error):
+                    //print("failure \(error.localizedDescription)")
+                    print(String(describing: error))
+            }
+            
+        }
+        
     }
-    */
-
+    
 }
+
+extension AladinViewController:UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.book.count
+}
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
+        let data = self.book[indexPath.row]
+        //cell.coverImage.text = data.cover
+        cell.titleLabel.text = data.title
+        //cell.priceLabel.text = data.priceStandard
+        cell.descriptionLabel.text = data.description
+
+        
+        
+        cell.selectionStyle = .none
+        return cell
+        
+    }
+    
+}
+
+extension UIImageView { func load(url: URL) { DispatchQueue.global().async { [weak self] in if let data = try? Data(contentsOf: url) { if let image = UIImage(data: data) { DispatchQueue.main.async { self?.image = image } } } } } }
+
