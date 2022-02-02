@@ -56,15 +56,14 @@ extension AladinViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
         let data = self.book[indexPath.row]
-        let url = URL(string: "url")
-        cell.coverImage.text = "\(data.cover)"
+        let url = URL(string: data.cover)
+        cell.coverImage.load(url: url!)
         cell.titleLabel.text = data.title
-        //cell.priceLabel.text = data.priceStandard
-        //.text = "\(price)" 문자열에 담기!
+        //cell.priceLabel.text = data.priceStandard 이거 아님 왜? price가 int로 선언되어 있어서
+        //그래서 우리는 price를 문자열에 담기 .text = "\(price)"
         cell.priceLabel.text = "\(data.priceStandard)"
         cell.descriptionLabel.text = data.description
 
-        
         
         cell.selectionStyle = .none
         return cell
