@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="876.5625"/>
         </scene>
-        <!--Detail Aladin View Controller-->
+        <!--DetailAladinViewController-->
         <scene sceneID="eAI-v6-JNG">
             <objects>
-                <viewController storyboardIdentifier="DetailAladinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AGl-sZ-qng" customClass="DetailAladinViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailAladinViewController" title="DetailAladinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AGl-sZ-qng" customClass="DetailAladinViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhK-EI-F3o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
