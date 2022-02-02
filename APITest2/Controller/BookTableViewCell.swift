@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class BookTableViewCell: UITableViewCell {
 
     @IBOutlet weak var coverImage: UIImageView!
@@ -17,6 +19,8 @@ class BookTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let url = URL(string: cover)
+        image.load(url: url!)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,4 +29,19 @@ class BookTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension UIImageView {
+    func load(url: URL){
+        DispatchQueue.global().async{
+            [weak self] in
+            if let data = try? Data(contentsOf: url){
+                if let image = UIImage(data: data){
+                    DispatchQueue.main.async{
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }

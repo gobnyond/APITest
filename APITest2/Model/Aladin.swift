@@ -22,10 +22,6 @@ struct AladinOpen: Decodable {
     var item: [Book]
 }
 
-//struct BookData: Decodable {
-    //var books: [Book]
-//}
-
 struct Book: Decodable {
     var cover: String
     var title: String

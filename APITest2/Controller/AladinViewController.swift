@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class AladinViewController: UIViewController {
 
@@ -35,8 +36,6 @@ class AladinViewController: UIViewController {
                 case .success(let response):
                     self.book = response.item
                     self.bookTableView.reloadData()
-                    
-                    //print(self.book
                     print("success")
                     
                 case .failure(let error):
@@ -57,9 +56,12 @@ extension AladinViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
         let data = self.book[indexPath.row]
-        //cell.coverImage.text = data.cover
+        let url = URL(string: "url")
+        cell.coverImage.text = "\(data.cover)"
         cell.titleLabel.text = data.title
         //cell.priceLabel.text = data.priceStandard
+        //.text = "\(price)" 문자열에 담기!
+        cell.priceLabel.text = "\(data.priceStandard)"
         cell.descriptionLabel.text = data.description
 
         
@@ -70,6 +72,17 @@ extension AladinViewController:UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-extension UIImageView { func load(url: URL) { DispatchQueue.global().async { [weak self] in if let data = try? Data(contentsOf: url) { if let image = UIImage(data: data) { DispatchQueue.main.async { self?.image = image } } } } } }
-
+extension UIImageView {
+    func load(url: URL){
+        DispatchQueue.global().async{
+            [weak self] in
+            if let data = try? Data(contentsOf: url){
+                if let image = UIImage(data: data){
+                    DispatchQueue.main.async{
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
