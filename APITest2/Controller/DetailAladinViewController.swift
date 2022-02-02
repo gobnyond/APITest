@@ -14,16 +14,18 @@ class DetailAladinViewController: UIViewController {
     @IBOutlet weak var detailpriceLabel: UILabel!
     @IBOutlet weak var detaildescriptionLabel: UILabel!
     
-    var detailcover:UIImage?
+    var detailcover:String?
     var detailtitle:String?
-    var detailprice:String?
+    var detailprice:Int?
     var detaildescription:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailcoverimage.image = detailcover
+        
+        let url = URL(string: detailcover!)
+        detailcoverimage.load(url: url!)
         detailtitleLabel.text = detailtitle
-        detailpriceLabel.text = detailprice
+        detailpriceLabel.text = "\(detailprice ?? 0) 원"
         detaildescriptionLabel.text = detaildescription
     }
 

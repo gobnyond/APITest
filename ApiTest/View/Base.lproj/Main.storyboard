@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0iU-vo-6nZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NeT-0e-cwy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="876.5625"/>
         </scene>
-        <!--DetailAladinViewController-->
+        <!--Detail Aladin View Controller-->
         <scene sceneID="eAI-v6-JNG">
             <objects>
-                <viewController storyboardIdentifier="DetailAladinViewController" title="DetailAladinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AGl-sZ-qng" customClass="DetailAladinViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailAladinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AGl-sZ-qng" customClass="DetailAladinViewController" customModule="ApiTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhK-EI-F3o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

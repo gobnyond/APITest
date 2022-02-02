@@ -19,7 +19,6 @@ class AladinViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.topItem?.title = ""
         
         self.bookTableView.delegate = self
         self.bookTableView.dataSource = self
@@ -82,10 +81,8 @@ extension AladinViewController:UITableViewDelegate, UITableViewDataSource {
         let vc = storyBoard.instantiateViewController(withIdentifier: "DetailAladinViewController") as!
         DetailAladinViewController
         
+        self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.pushViewController(vc, animated: true)
-        
-      // let data = self.book[indexPath.row]
-        //let url = URL(string: data.cover)
         
         vc.detailcover = book[indexPath.row].cover
         vc.detailtitle = book[indexPath.row].title
