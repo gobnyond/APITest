@@ -15,7 +15,6 @@
 		F117089E27A3129D00F02BE1 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117089C27A3129D00F02BE1 /* BookTableViewCell.swift */; };
 		F117089F27A3129D00F02BE1 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F117089D27A3129D00F02BE1 /* BookTableViewCell.xib */; };
 		F11708A127A3141200F02BE1 /* DetailAladinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11708A027A3141200F02BE1 /* DetailAladinViewController.swift */; };
-		F11708A327AA727D00F02BE1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11708A227AA727D00F02BE1 /* Image.swift */; };
 		F1232C4D27A25EBD00CE5B68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1232C4C27A25EBD00CE5B68 /* AppDelegate.swift */; };
 		F1232C4F27A25EBD00CE5B68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1232C4E27A25EBD00CE5B68 /* SceneDelegate.swift */; };
 		F1232C5127A25EBD00CE5B68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1232C5027A25EBD00CE5B68 /* ViewController.swift */; };
@@ -62,7 +61,6 @@
 		F117089C27A3129D00F02BE1 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		F117089D27A3129D00F02BE1 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		F11708A027A3141200F02BE1 /* DetailAladinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAladinViewController.swift; sourceTree = "<group>"; };
-		F11708A227AA727D00F02BE1 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F1232C4927A25EBD00CE5B68 /* ApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1232C4C27A25EBD00CE5B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1232C4E27A25EBD00CE5B68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				F117089727A3083400F02BE1 /* Model */,
 				F117089627A3082200F02BE1 /* View */,
 				F117089527A3081700F02BE1 /* Controller */,
-				F11708A227AA727D00F02BE1 /* Image.swift */,
 			);
 			path = APITest2;
 			sourceTree = "<group>";
@@ -503,7 +500,6 @@
 				F117089B27A30D1900F02BE1 /* AladinViewController.swift in Sources */,
 				F1232C5727A25EBD00CE5B68 /* ApiTest.xcdatamodeld in Sources */,
 				F11708A127A3141200F02BE1 /* DetailAladinViewController.swift in Sources */,
-				F11708A327AA727D00F02BE1 /* Image.swift in Sources */,
 				F1232C4F27A25EBD00CE5B68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

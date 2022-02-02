@@ -8,26 +8,23 @@
 import UIKit
 
 class DetailAladinViewController: UIViewController {
+    
     @IBOutlet weak var detailcoverimage: UIImageView!
     @IBOutlet weak var detailtitleLabel: UILabel!
     @IBOutlet weak var detailpriceLabel: UILabel!
     @IBOutlet weak var detaildescriptionLabel: UILabel!
     
+    var detailcover:UIImage?
+    var detailtitle:String?
+    var detailprice:String?
+    var detaildescription:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        detailcoverimage.image = detailcover
+        detailtitleLabel.text = detailtitle
+        detailpriceLabel.text = detailprice
+        detaildescriptionLabel.text = detaildescription
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

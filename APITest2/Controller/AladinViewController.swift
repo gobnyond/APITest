@@ -70,7 +70,30 @@ extension AladinViewController:UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "DetailAladinViewController") as!
+        DetailAladinViewController
+        
+      // let data = self.book[indexPath.row]
+        //let url = URL(string: data.cover)
+        
+        //vc.detailcover = book[indexPath.row].cover
+        vc.detailtitle = book[indexPath.row].title
+        //vc.detailprice = book[indexPath.row].priceStandard
+        vc.detaildescription = book[indexPath.row].description
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        }
+    
+        
 }
+    
 extension UIImageView {
     func load(url: URL){
         DispatchQueue.global().async{
